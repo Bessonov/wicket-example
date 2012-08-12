@@ -9,29 +9,35 @@ Simple example include:
 ## Standalone application packaging
 
 To package:
+
 	mvn package
 
 To run:
+
 	java -jar target/wicketexmaple-1.0-SNAPSHOT.jar
 	or
 	java -cp target/wicketexmaple-1.0-SNAPSHOT.jar de.bessonov.EmbeddedJettyServer
 
 To show:
-	http://localhost:8080/
+	[http://localhost:8080/](http://localhost:8080/)
 
 ## Change package structure
 For own package structure you can:
 - Refactor
-	or (especially for non-IDE users)
-- Rearchetype:
-	To create archetype:
-	cd checkout folder
+- Rearchetype (especially for non-IDE users)
+
+### Rearchetype
+
+To create archetype:
+
+	cd checkout_folder
 	mvn clean archetype:create-from-project
 	cd target/generated-sources/archetype/
 	mvn install
 
-	To create application
-	cd work folder
+And then you can create application:
+
+	cd work_folder
 	mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=de.bessonov -DarchetypeArtifactId=wicketexample-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=my.domain -DartifactId=myproject -Dversion=1.0-SNAPSHOT
 
 # License
