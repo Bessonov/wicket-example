@@ -1,0 +1,17 @@
+<html xmlns:wicket="http://wicket.apache.org/">
+<body>
+
+<wicket:panel>
+	<form id="login_form" wicket:id="loginForm">
+		<label for="login_form_email"><wicket:message key="E-Mail">E-Mail</wicket:message>:</label>
+		<input type="text" wicket:id="email" id="login_form_email" /><br />
+
+		<label for="login_form_password"><wicket:message key="Password">Password</wicket:message>:</label>
+		<input type="password" wicket:id="password" id="login_form_password" /><br />
+
+		<input wicket:message="value:Login" type="submit" value="Login" />
+	</form>
+</wicket:panel>
+
+</body>
+</html>
