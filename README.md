@@ -1,10 +1,22 @@
-# Apache Wicket Example
+# Apache Wicket Authentication and Authorization Example
 
 Simple example include:
 - i18n
 - Hibernate (hsqldb is default and mysql example config is included)
 - Authentication (Register/Login/Logout)
+- Authorization (Render Panels, Register only for anonymous user access)
 - Standalone application packaging
+
+## Run application
+
+To run application:
+
+	git clone https://github.com/Bessonov/wicket-example
+	cd wicket-example
+	mvn jetty:run
+
+To show:
+	[http://localhost:8080/](http://localhost:8080/)
 
 ## Standalone application packaging
 
@@ -30,7 +42,8 @@ For own package structure you can:
 
 To create archetype:
 
-	cd checkout_folder
+	git clone https://github.com/Bessonov/wicket-example
+	cd wicket-example/
 	mvn clean archetype:create-from-project
 	cd target/generated-sources/archetype/
 	mvn install
