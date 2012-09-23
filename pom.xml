@@ -273,6 +273,18 @@
 									<mainClass>${project.groupId}.EmbeddedJettyServer</mainClass>
 								</transformer>
 							</transformers>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<!-- exclude signed manifest files -->
+										<!-- see http://stackoverflow.com/a/6743609/926620 -->
+										<exclude>META-INF/*.SF</exclude>
+										<exclude>META-INF/*.DSA</exclude>
+										<exclude>META-INF/*.RSA</exclude>
+									</excludes>
+								</filter>
+							</filters>
 						</configuration>
 					</execution>
 				</executions>
