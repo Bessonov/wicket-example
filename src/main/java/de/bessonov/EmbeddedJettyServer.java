@@ -15,8 +15,8 @@ package de.bessonov;
 import java.net.URL;
 import java.security.ProtectionDomain;
 
-import org.mortbay.jetty.Server;
-import org.mortbay.jetty.webapp.WebAppContext;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.webapp.WebAppContext;
 
 public final class EmbeddedJettyServer {
     public static void main(String[] args) throws Exception {
@@ -30,7 +30,7 @@ public final class EmbeddedJettyServer {
         webapp.setContextPath("/");
         webapp.setServer(server);
         webapp.setWar(location.toExternalForm());
-        server.addHandler(webapp);
+        server.setHandler(webapp);
         server.start();
         server.join();
     }

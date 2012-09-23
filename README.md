@@ -1,11 +1,19 @@
 # Apache Wicket Authentication and Authorization Example
 
 Simple example include:
-- i18n
-- Hibernate (hsqldb is default and mysql example config is included)
-- Authentication (Register/Login/Logout)
-- Authorization (Render Panels, Register only for anonymous user access)
-- Standalone application packaging
+- Apache Wicket (1.5.8)
+- Jetty (8.1.7)
+- i18n (English, German)
+- Hibernate (4.1.7, hsqldb is default and mysql example config is included)
+- Spring (3.1.2)
+- Authentication (Register, Login, Logout)
+- Authorization (Render panels, Register only for anonymous user access)
+- Standalone web application packaging
+
+## Requirements
+
+- Apache Maven 2
+- Java 6
 
 ## Run application
 
